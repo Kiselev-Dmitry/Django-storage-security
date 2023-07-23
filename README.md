@@ -7,17 +7,33 @@ Python3 должен быть уже установлен. Затем испол
     pip install -r requirements.txt
 
 ### Переменные окружения
-Чтобы указать переменные окружения (необходимые для работы), создайте в папке проекта файл `.env`. Его содержимое должно быть следующим:
+Чтобы указать переменные окружения, необходимые для работы, создайте в папке проекта файл `.env`. Его содержимое должно выглядеть так:
 
-    HOST='checkpoint.host.example'
-    PASSWORD='kvob1'
-    SECRET_KEY='SECRET_INFO'
+    DB_ENGINE=django.db.backends.postgresql_psycopg2
+    DB_HOST=checkpoint.host.example
+    DB_PORT=1111
+    DB_NAME=checkname
+    DB_USER=user
+    DB_PASSWORD=xxxxx
+    SECRET_KEY=SECRET_INFO
     DEBUG=False
+    ALLOWED_HOSTS=[127.0.0.1:8000]
+
 где
 
-`HOST` - хост базы данных.
-`PASSWORD` - пароль пользователя.
-`DEBUG` - дебаг режим. Включается значением `True`, выключается значением `False`.
+`ENGINE` - движок для сайта
+
+`HOST` - хост базы данных
+
+`PORT` - порт
+
+`NAME` - имя пользователя
+
+`USER` - никнейм пользователя
+
+`PASSWORD` - пароль пользователя
+
+`DEBUG` - дебаг режим. Включается значением `True`, выключается значением `False`
 
 ## Запуск
 Запуск осуществляется из командной строки
